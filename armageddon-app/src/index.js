@@ -11,7 +11,7 @@ import {Asteroids} from "./pages/Asteroids";
 
 const router = createBrowserRouter([
     {
-        path: "/astroids",
+        path: "/asteroids",
         element: <Asteroids/>,
     },
     {

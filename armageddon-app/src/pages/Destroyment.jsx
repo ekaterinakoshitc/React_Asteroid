@@ -1,4 +1,6 @@
+import {Header} from "../components/header/Header";
+
 export const Destroyment = () => {
-    return <div>Destroyments page</div>
+    return <div><Header/>Destroyment page</div>
 
 }
