@@ -11,7 +11,8 @@
       "esnext"
     ],
     "target": "esnext",
-    "allowJs":true
+    "allowJs":true,
+
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

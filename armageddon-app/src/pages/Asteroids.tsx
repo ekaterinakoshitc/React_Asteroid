@@ -2,15 +2,16 @@ import { Header } from '../components/header/Header';
 import styles from './Asteroids.module.css';
 import { AsteroidCard } from '../components/asteroidCard/AsteroidCard';
 import { Asteroid } from './Asteroid';
-import {useContext, useEffect, useState} from 'react';
-import {AsteroidsContext} from "../components/asteroids_context/AsteroidsContext";
+import { useContext, useEffect, useState } from 'react';
+import { AsteroidsContext } from '../components/asteroids_context/AsteroidsContext';
+import {getUserKey} from "../utils/getUserKey";
 
 export const Asteroids = () => {
   {
     /*const asteroids = [
-        { name: "first", isDangerous: true },
-        { name: "second", isDangerous: false }
-    ];*/
+            { name: "first", isDangerous: true },
+            { name: "second", isDangerous: false }
+        ];*/
   }
 
   const [asteroids, setAsteroids] = useState<
@@ -27,11 +28,10 @@ export const Asteroids = () => {
     }[]
   >([]);
 
-
   useEffect(() => {
     try {
       const response = fetch(
-        'https://api.nasa.gov/neo/rest/v1/feed?start_date=2001-01-01&end_date=2001-01-07&api_key=tZF1a0vxtZXSeqN7RiAiNc7Oar63bQBcg5djX4jp'
+        `https://api.nasa.gov/neo/rest/v1/feed?start_date=2001-01-01&end_date=2001-01-07&api_key=${getUserKey()}`
       )
         .then((res) => {
           return res.json();
@@ -75,12 +75,13 @@ export const Asteroids = () => {
     //fetchData();
   }, []);
 
-  const {onlyDangerous, setOnlyDangerous} = useContext(AsteroidsContext);
-  const {selectedDistance, setSelectedDistance} = useContext(AsteroidsContext);
+  const { onlyDangerous, setOnlyDangerous } = useContext(AsteroidsContext);
+  const { selectedDistance, setSelectedDistance } =
+    useContext(AsteroidsContext);
 
   return (
     <div>
-      Home
+      <Header />
       <div className={styles.showDangerousOnly}>
         <input
           type="checkbox"
