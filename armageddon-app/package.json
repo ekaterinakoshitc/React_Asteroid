@@ -2,7 +2,7 @@
   "name": "armageddon-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/ekaterinakoshitc/React_Asteroid/blob/task-1",
+  "homepage": "https://ekaterinakoshitc.github.io/asteroids",
   "dependencies": {
     "@eslint/js": "^9.22.0",
     "@testing-library/dom": "^10.4.0",
