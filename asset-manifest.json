@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b681baa8.css",
-    "main.js": "/static/js/main.9490013d.js",
-    "static/js/453.faf6e8cc.chunk.js": "/static/js/453.faf6e8cc.chunk.js",
-    "index.html": "/index.html",
-    "main.b681baa8.css.map": "/static/css/main.b681baa8.css.map",
-    "main.9490013d.js.map": "/static/js/main.9490013d.js.map",
-    "453.faf6e8cc.chunk.js.map": "/static/js/453.faf6e8cc.chunk.js.map"
+    "main.css": "/React_Asteroid/static/css/main.b681baa8.css",
+    "main.js": "/React_Asteroid/static/js/main.f8991adc.js",
+    "static/js/453.faf6e8cc.chunk.js": "/React_Asteroid/static/js/453.faf6e8cc.chunk.js",
+    "index.html": "/React_Asteroid/index.html",
+    "main.b681baa8.css.map": "/React_Asteroid/static/css/main.b681baa8.css.map",
+    "main.f8991adc.js.map": "/React_Asteroid/static/js/main.f8991adc.js.map",
+    "453.faf6e8cc.chunk.js.map": "/React_Asteroid/static/js/453.faf6e8cc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b681baa8.css",
-    "static/js/main.9490013d.js"
+    "static/js/main.f8991adc.js"
   ]
 }
