@@ -11,8 +11,8 @@ import {AsteroidsContextProvider} from "./components/asteroids_context/Asteroids
 
 const router = createHashRouter([
   {
-    path: '/',
-    element: <Navigate to="/asteroids" replace />,
+    path: "*",
+    element: <Asteroids />
   },
   {
     path: '/asteroids',

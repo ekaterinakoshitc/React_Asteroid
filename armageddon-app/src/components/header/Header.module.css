@@ -8,5 +8,14 @@
     padding: 20px;
 }
 
+.button_type_visual
+{
+    border-style: double;
+    padding: 10px;
+}
 
-
+.key_style
+{
+    border-style: double;
+    padding: 10px;
+}

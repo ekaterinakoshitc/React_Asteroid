@@ -17,31 +17,35 @@ export const Header = memo(() => {
         </div>
       </div>
       <div>
-        <Link to={'/asteroids'} onClick={() => console.log()}>
+        <Link className={styles.button_type_visual} to={'/asteroids'} onClick={() => console.log()}>
           Астероиды
         </Link>
-        <Link to={'/destroyment'}>Уничтожение</Link>
+        <Link className={styles.button_type_visual} to={'/destroyment'}>Уничтожение</Link>
       </div>
-      <div>
+      <div className={styles.key_style}>
         {getUserKey() === 'DEMO_KEY' ? (
-          <button onClick={() => setInputOpen(!inputOpen)}>
-            UnAutorization
-          </button>
+            <button
+                className={styles.apiKeyButton}
+                onClick={() => setInputOpen(!inputOpen)}
+            >
+                Unauthorized
+            </button>
         ) : (
-          <div>Api key provided</div>
+            <div>API key provided</div>
         )}
       </div>
-      {inputOpen ? (
-        <input
-            data-testId={"api_key_input"}
-          onChange={(ev) => {
-            if (ev.target.value.length == 40) {
-              localStorage.setItem('API_KEY', ev.target.value);
-              setInputOpen(false);
-            }
-          }}
-        />
-      ) : null}
+        {inputOpen && (
+            <input
+                className={styles.apiKeyInput}
+                placeholder="Enter API Key"
+                onChange={(ev) => {
+                    if (ev.target.value.length === 40) {
+                        localStorage.setItem("API_KEY", ev.target.value);
+                        setInputOpen(false);
+                    }
+                }}
+            />
+        )}
     </div>
   );
 });

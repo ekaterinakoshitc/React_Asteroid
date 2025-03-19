@@ -4,14 +4,14 @@ import { AsteroidCard } from '../components/asteroidCard/AsteroidCard';
 import { Asteroid } from './Asteroid';
 import { useContext, useEffect, useState } from 'react';
 import { AsteroidsContext } from '../components/asteroids_context/AsteroidsContext';
-import {getUserKey} from "../utils/getUserKey";
+import { getUserKey } from '../utils/getUserKey';
 
 export const Asteroids = () => {
   {
     /*const asteroids = [
-            { name: "first", isDangerous: true },
-            { name: "second", isDangerous: false }
-        ];*/
+                    { name: "first", isDangerous: true },
+                    { name: "second", isDangerous: false }
+                ];*/
   }
 
   const [asteroids, setAsteroids] = useState<
@@ -27,6 +27,8 @@ export const Asteroids = () => {
       isDangerous: boolean;
     }[]
   >([]);
+
+  const [selectedButtonDist, setselectedButtonDist] = useState(true);
 
   useEffect(() => {
     try {
@@ -93,20 +95,34 @@ export const Asteroids = () => {
       <div className={styles.button_container}>
         Расстояние
         <button
+          style={{
+            fontWeight:
+              selectedDistance && setselectedButtonDist ? 'bold' : 'normal',
+          }}
           className={styles.distance_button}
-          onClick={() => setSelectedDistance(true)}
+          onClick={() => {
+            setSelectedDistance(true);
+            setselectedButtonDist(false);
+          }}
         >
           в километрах
         </button>
         ,
         <button
+          style={{
+            fontWeight:
+              !selectedDistance && selectedButtonDist ? 'bold' : 'normal',
+          }}
           className={styles.distance_button}
-          onClick={() => setSelectedDistance(false)}
+          onClick={() => {
+            setSelectedDistance(false);
+            setselectedButtonDist(true);
+          }}
         >
           в дистанциях до луны
         </button>
       </div>
-      <div>Load asteroids</div>
+
       {onlyDangerous
         ? asteroids
             .filter((it) => it.isDangerous)

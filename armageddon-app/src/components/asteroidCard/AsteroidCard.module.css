@@ -1,7 +1,6 @@
-/* Основные стили для карточки */
 .card {
     border: 1px solid #000000;
-    border-radius: 10px;
+    border-radius: 0px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -12,9 +11,9 @@
     margin: 16px auto;
     padding: 20px;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 
-/* Стиль для неопасных астероидов */
 .card.normCard {
     position: relative;
     width: 920px;
@@ -25,7 +24,7 @@
 
 }
 
-/* Стиль для опасных астероидов */
+
 .card.cardRed {
     position: relative;
     width: 920px;
@@ -39,7 +38,7 @@
     height: 72px;
 }
 
-/* Контейнер для текста (центрированный) */
+
 .cardContent {
     text-align: center;
     flex: 1;
@@ -83,3 +82,6 @@
     color: red;
 }
 
+.activeButton {
+    font-weight: bold;
+}
