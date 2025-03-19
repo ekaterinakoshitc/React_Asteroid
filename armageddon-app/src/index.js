@@ -26,7 +26,11 @@ const router = createHashRouter([
     path: '/asteroid/:id',
     element: <Asteroid />,
   },
-]);
+],
+{
+  basename: "/React_Asteroid",
+}
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
