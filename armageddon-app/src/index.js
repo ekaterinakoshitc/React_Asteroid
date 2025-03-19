@@ -3,33 +3,43 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, createHashRouter, RouterProvider, Navigate} from 'react-router-dom';
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider,
+  Navigate,
+} from 'react-router-dom';
 import { Asteroid } from './pages/Asteroid';
 import { Destroyment } from './pages/Destroyment';
 import { Asteroids } from './pages/Asteroids';
-import {AsteroidsContextProvider} from "./components/asteroids_context/AsteroidsContext";
+import { AsteroidsContextProvider } from './components/asteroids_context/AsteroidsContext';
 
-const router = createHashRouter([
+const router = createHashRouter(
+  [
+    {
+      path: '/',
+      element: <Navigate to="/asteroids" replace />, // Перенаправление на /asteroids
+    },
+    {
+      path: '*',
+      element: <Asteroids />,
+    },
+    {
+      path: '/asteroids',
+      element: <Asteroids />,
+    },
+    {
+      path: '/destroyment',
+      element: <Destroyment />,
+    },
+    {
+      path: '/asteroid/:id',
+      element: <Asteroid />,
+    },
+  ],
   {
-    path: "*",
-    element: <Asteroids />
-  },
-  {
-    path: '/asteroids',
-    element: <Asteroids />,
-  },
-  {
-    path: '/destroyment',
-    element: <Destroyment />,
-  },
-  {
-    path: '/asteroid/:id',
-    element: <Asteroid />,
-  },
-],
-{
-  basename: "/React_Asteroid",
-}
+    basename: '/React_Asteroid',
+  }
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
