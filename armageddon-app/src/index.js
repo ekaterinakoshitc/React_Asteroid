@@ -18,12 +18,13 @@ const router = createHashRouter(
   [
     {
       path: '/',
-      element: <Navigate to="/asteroids" replace />, // Перенаправление на /asteroids
+      element: <Navigate to="/asteroids" replace />,
     },
     {
       path: '*',
-      element: <Asteroids />,
+      element: <Navigate to="/asteroids" replace />,
     },
+
     {
       path: '/asteroids',
       element: <Asteroids />,
@@ -36,10 +37,10 @@ const router = createHashRouter(
       path: '/asteroid/:id',
       element: <Asteroid />,
     },
-  ],
-  {
-    basename: '/React_Asteroid',
-  }
+  ]
+  /*{
+      basename: '/React_Asteroid',
+    }*/
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
