@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ekaterinakoshitc/React_Asteroid/static/css/main.b681baa8.css",
-    "main.js": "/ekaterinakoshitc/React_Asteroid/static/js/main.b03f5ee9.js",
+    "main.js": "/ekaterinakoshitc/React_Asteroid/static/js/main.31a42fca.js",
     "static/js/453.faf6e8cc.chunk.js": "/ekaterinakoshitc/React_Asteroid/static/js/453.faf6e8cc.chunk.js",
     "index.html": "/ekaterinakoshitc/React_Asteroid/index.html",
     "main.b681baa8.css.map": "/ekaterinakoshitc/React_Asteroid/static/css/main.b681baa8.css.map",
-    "main.b03f5ee9.js.map": "/ekaterinakoshitc/React_Asteroid/static/js/main.b03f5ee9.js.map",
+    "main.31a42fca.js.map": "/ekaterinakoshitc/React_Asteroid/static/js/main.31a42fca.js.map",
     "453.faf6e8cc.chunk.js.map": "/ekaterinakoshitc/React_Asteroid/static/js/453.faf6e8cc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b681baa8.css",
-    "static/js/main.b03f5ee9.js"
+    "static/js/main.31a42fca.js"
   ]
 }
